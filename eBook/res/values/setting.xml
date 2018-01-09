@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="HOST">192.168.2.89</string>
+    <string name="BASE_API_URL">/ebook/api/</string>
+    <string name="API_USERNAME">admin</string>
+    <string name="API_PASSWORD">1234</string>
+    <string name="API_DOWNLOAD_FILE">/ebook/files/</string>
+    
+</resources>

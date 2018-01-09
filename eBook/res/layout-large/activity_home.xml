@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF66" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_ebook"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true" >
+
+        <Button
+            android:id="@+id/btn_search"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/main_button"
+            android:onClick="searchBook"
+            android:text="@string/txt_search"
+            android:textColor="#FF0000" />
+
+        <EditText
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_search"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:background="#FF9900"
+            android:ems="10"
+            android:hint="Search.."
+            android:inputType="textCapWords|textLongMessage"
+            android:nextFocusDown="@id/relativeLayout1"
+            android:nextFocusLeft="@id/relativeLayout1"
+            android:nextFocusUp="@id/relativeLayout1"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white" >
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/btn_latest"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_button"
+            android:onClick="getAllBook"
+            android:text="@string/txt_latest"
+            android:textColor="#FF0000" />
+
+        <Button
+            android:id="@+id/btn_category"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn_latest"
+            android:background="@drawable/main_button"
+            android:onClick="getCategory"
+            android:text="@string/txt_category"
+            android:textColor="#FF0000" />
+
+        <Button
+            android:id="@+id/btn_library"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn_category"
+            android:background="@drawable/main_button"
+            android:onClick="openLibrary"
+            android:text="@string/txt_library"
+            android:textColor="#FF0000" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/main_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="#FF9900"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+    <!-- <com.handmark.pulltorefresh.library.PullToRefreshListView -->
+    <!-- android:id="@+id/main_list" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_alignParentLeft="true" -->
+    <!-- android:layout_below="@+id/relativeLayout2" -->
+    <!-- android:cacheColorHint="#00000000" -->
+    <!-- android:divider="#19000000" -->
+    <!-- android:dividerHeight="4dp" -->
+    <!-- android:fadingEdge="none" -->
+    <!-- android:fastScrollEnabled="false" -->
+    <!-- android:footerDividersEnabled="false" -->
+    <!-- android:headerDividersEnabled="false" -->
+    <!-- android:smoothScrollbar="true" > -->
+
+
+    <!-- </com.handmark.pulltorefresh.library.PullToRefreshListView> -->
+
+</RelativeLayout>
